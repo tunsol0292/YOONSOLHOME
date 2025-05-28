@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOARD!</title>
+    <link rel="stylesheet" href="index.css">
+    <script defer src="index.js"></script>
+</head>
+<body>
+
+    <h1>🐬 BOARD 🐬</h1>
+
+    <input type="text" name="title" placeholder="제목을 입력하세요. 🐬"><br><br>
+
+    <textarea name="content" placeholder="내용을 입력하세요. 🐬"></textarea><br><br>
+
+    <button onclick="insert();">작성하기</button>
+    <button onclick="selectList();">게시물 조회하기</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>no</th>
+                <th>제목</th>
+                <th>내용</th>
+                <th>올린 시간</th>
+                <th>삭제하기</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <!-- 모달창 -->
+    <div id="overlay">
+        <div id="modal" onclick="closeModal(this);">
+            <div>
+                <span id="no">번호</span>
+                <h2 id="title">제목</h2>
+                <span id="date">날짜</span>
+            </div>
+            <div id="content">내용</div>
+        </div>
+    </div>
+</body>
+</html>
